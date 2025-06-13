@@ -44,6 +44,13 @@ public class AddressBookMain {
 
         System.out.println("\nFinal Contact List:");
         addressBook.displayContacts();
+        
+        System.out.print("\nEnter the First Name of contact to delete: ");
+        String nameToDelete = scanner.nextLine();
+        addressBook.deleteContact(nameToDelete);
+
+        System.out.println("\nFinal Contact List:");
+        addressBook.displayContacts();
 	}
 
 }
