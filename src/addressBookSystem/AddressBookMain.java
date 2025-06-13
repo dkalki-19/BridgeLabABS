@@ -1,10 +1,14 @@
 package addressBookSystem;
 
+import java.util.Scanner;
+
 public class AddressBookMain {
 	public static void main(String[] args) {
 		System.out.println("Welcome to address book program");
 		
 		Scanner scanner = new Scanner(System.in);
+        AddressBook addressBook = new AddressBook();
+
 
         System.out.println("Enter Contact Details:");
         System.out.print("First Name: ");
@@ -28,7 +32,11 @@ public class AddressBookMain {
 
         System.out.println("\nContact Created Successfully:");
         System.out.println(contact);
-		
+        
+        Contact newContact = new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email);
+
+        addressBook.addContact(newContact);
+        addressBook.displayContacts();
 	}
 
 }
