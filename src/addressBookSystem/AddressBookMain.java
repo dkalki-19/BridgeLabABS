@@ -37,6 +37,13 @@ public class AddressBookMain {
 
         addressBook.addContact(newContact);
         addressBook.displayContacts();
+        
+        System.out.print("\nEnter the First Name of contact to edit: ");
+        String nameToEdit = scanner.nextLine();
+        addressBook.editContact(nameToEdit);
+
+        System.out.println("\nFinal Contact List:");
+        addressBook.displayContacts();
 	}
 
 }
