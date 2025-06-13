@@ -8,7 +8,7 @@ public class AddressBookMain {
 		
 		Scanner scanner = new Scanner(System.in);
         AddressBook addressBook = new AddressBook();
-
+        AddressBookSystem system = new AddressBookSystem();
 
         String choice;
         do {
@@ -63,6 +63,9 @@ public class AddressBookMain {
 
         System.out.println("\nFinal Contact List:");
         addressBook.displayContacts();
+        
+        System.out.println("\nSummary:");
+        system.listAddressBooks();
 	}
 
 }
